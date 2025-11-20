@@ -1,0 +1,11 @@
+# Read the documentation at https://github.com/thephpleague/flysystem-bundle/blob/master/docs/1-getting-started.md
+flysystem:
+    storages:
+        default.storage:
+            adapter: 'sftp'
+            options:
+                host: '%env(SFTP_HOST)%'
+                username: '%env(SFTP_USERNAME)%'
+                password: '%env(SFTP_PASSWORD)%'
+                port: '%env(int:SFTP_PORT)%'
+                root: '%env(SFTP_ROOT)%'
